@@ -3,6 +3,7 @@ rudimentary python script displaying passive effects of artifacts in your invent
 
 requirements:
   - python3
+
 usage:
   - put artifacts you want to check in your backpack or similar worn storage.
   - extract your character using the debug menu.
