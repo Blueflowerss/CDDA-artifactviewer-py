@@ -35,8 +35,9 @@ for art in artifacts:
 artifacts2 = [ast.literal_eval(el1) for el1 in set([str(el2) for el2 in artifacts1])]
 #https://stackoverflow.com/questions/11741876/getting-unique-values-from-a-list-of-dict
 for art in artifacts2:
-    pEffects = art["relic_data"]["passive_effects"][0]["values"]
-    print(art["typeid"])
-    for effect in pEffects:
-        if len(effect) != 1:
-            print(effect)
+    if "passive_effects" in art["relic_data"]:
+        pEffects = art["relic_data"]["passive_effects"][0]["values"]
+        print(art["typeid"])
+        for effect in pEffects:
+            if len(effect) != 1:
+                print(effect)
